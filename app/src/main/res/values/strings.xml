@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Cadastro Professor</string>
+    <string name="titulo">Cadastro Professor</string>
+
+    <string name="hint_nome">Nome</string>
+
+    <string name="hint_id">ID</string>
+
+    <string name="hint_email">Email</string>
+
+    <string name="hint_data">Data</string>
+
+    <string name="hint_hora">Hora</string>
+
+    <string name="_prompt">Qual o LEC</string>
+    <string-array name="lec_array">
+        <item>LEC01</item>
+        <item>LEC02</item>
+        <item>LEC03</item>
+        <item>LEC04</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.aluisiojunior.a1avaliacao.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_um"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+            <EditText
+                android:id="@+id/edt_NomeID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_nome"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edt_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_id"
+                android:inputType="number"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/edt_EmailID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_dois"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+            <EditText
+                android:id="@+id/edt_dataID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_data"
+                android:inputType="date"
+                android:onClick="MostrarData1" />
+
+            <EditText
+                android:id="@+id/edt_horaID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_hora"
+                android:inputType="time"
+                android:onClick="MostrarHora" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_tres"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Ecolha o LEC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/lec_array"
+                android:hint="@string/_prompt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_quatro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+
+            <TextView
+                android:id="@+id/editText9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="DataShow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,TextViewEdits" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sim" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRadio"
+                    android:text="Não" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_quinto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="configuracao"
+                android:text="Android Studio + Android SDK" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="configuracao"
+
+                android:text="java SDK" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="configuracao"
+
+                android:text="Sistema Operacional Linux" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="configuracao"
+                android:text="Sistema Operacional Windowns" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay_sexto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reserva Prioritaria"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="reservado"
+                android:text="ToggleButton" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_setimo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f8f8f8"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:ignore="DuplicateIds,UselessParent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            tools:targetApi="lollipop">
+
+
+            <ImageButton
+                android:id="@+id/btn_gravar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
